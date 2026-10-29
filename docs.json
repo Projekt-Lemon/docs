@@ -29,10 +29,14 @@
           "modules/welcome-messages",
           "modules/tickets",
           "modules/verification",
+          "modules/warns",
+          "modules/honeypot",
           "modules/security",
           "modules/leveling",
           "modules/embed-maker",
-          "modules/community-tools"
+          "modules/community-tools",
+          "modules/scam-detection",
+          "modules/ghostping"
         ]
       },
       {

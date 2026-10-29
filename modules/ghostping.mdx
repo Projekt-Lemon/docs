@@ -1,0 +1,76 @@
+---
+title: "Ghostping"
+description: "Detect and log ghost pings, when a member mentions someone and then deletes the message."
+---
+
+A ghost ping happens when a member mentions someone and then deletes the message right away. The mentioned person gets a notification but can't see why. The Ghostping module detects this, logs it and can warn the member who did it.
+
+Open the dashboard and go to **Moderation & Sicherheit** > **Ghostping**.
+
+## Turn it on
+
+Check **Ghostping-Erkennung aktiv** to turn on detection.
+
+## Settings
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| **Log-Kanal** | Jeweiliger Kanal | Where the bot posts the log message. **Jeweiliger Kanal** posts it in the channel where the ghost ping happened. You can also pick any channel on your server. |
+| **Automatische Warnung an den Verursacher** | On | Warns the member who sent the ghost ping. See [DM to the member](#dm-to-the-member). |
+| **Bots ignorieren** | Off | Ignores ghost pings sent by bots. |
+| **Min. Mentions** | 1 | The minimum number of mentions a deleted message needs to count as a ghost ping. |
+| **Ignorierte Rollen** | None | Members with these roles are never flagged. |
+
+## Log message
+
+The **Log-Nachricht (bei erkanntem Ghostping)** is posted in the log channel when a ghost ping is detected. Choose the **Nachrichtentyp** and build the message in the embed editor:
+
+- Author, title and description
+- Image and thumbnail
+- Footer text
+- Color
+
+Example description:
+
+```text
+{ghostpinger} hat eine Nachricht mit Erwähnung von {user_mention} gelöscht.
+```
+
+<Tip>
+Type `%` in a text field to open the list of variables.
+</Tip>
+
+## DM to the member
+
+The **Nachricht an den Verursacher (DM)** is sent to the member who sent the ghost ping. It is only sent when **Automatische Warnung an den Verursacher** is on and no [warn system](/modules/warns) handles the case.
+
+The default message looks like this:
+
+- **Name:** `Ghostping-Verursacher-DM`
+- **Title:** ⚠️ Ghostping erkannt
+- **Description:** `Auf **{server}** wurde ein Ghostping von dir erkannt. Bitte erwähne Nutzer nicht und lösche die Nachricht nicht sofort.`
+
+You can edit the author, title, description, thumbnail, footer and color.
+
+## Variables
+
+| Variable | Description |
+| --- | --- |
+| `{ghostpinger}` | Name of the member who sent the ghost ping |
+| `{ghostpinger_mention}` | Mention of the member who sent the ghost ping |
+| `{gotghostpinged}` | Name of the mentioned member |
+| `{gotghostpinged_mention}` | Mention of the mentioned member |
+| `{user}` | The member who sent the ghost ping (mention) |
+| `{username}` | Name of the member who sent the ghost ping |
+| `{user_mention}` | Mention of the member who sent the ghost ping |
+| `{user_id}` | ID of the member who sent the ghost ping |
+| `{channel}` | The channel where the ghost ping happened |
+| `{channel_mention}` | Mention of that channel |
+| `{mentions}` | The mentions in the deleted message |
+| `{content}` | Content of the deleted message |
+| `{server}` | Your server name |
+| `{mention}` | Mention of the member (DM message only) |
+
+## Save your changes
+
+Click **Ghostping speichern**. When you have unsaved changes, a bar appears at the bottom with **Du hast ungespeicherte Änderungen!**. Click **Änderungen speichern** to save or **Abbrechen** to discard.

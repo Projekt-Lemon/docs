@@ -1,0 +1,36 @@
+---
+title: "Honeypot"
+description: "Set up a trap channel, matching rule, punishment, moderation log and channel message for the Honeypot spam filter."
+---
+
+The Honeypot module lets you configure a trap channel for spam bots. The dashboard groups its settings into channel assignment, a matching rule, punishment, logging and the channel message.
+
+## Set up the trap
+
+1. Turn on **Honeypot-Spamfilter global aktiv**.
+2. Under **Kanal-Zuweisung (Fallen-Kanal)**, select the trap channel. Hide it from regular members so they do not trigger the trap accidentally.
+3. Under **Auto-Moderations-Regel**, review the matching rule. The displayed default regular expression is `.*`.
+4. Under **Bestrafung & Aktion**, configure the punishment. **Sofortiger Bann** is shown, along with an option to purge messages from the last 24 hours.
+5. Under **Logging & Benachrichtigungen**, select a **Mod-Log** channel.
+
+## Trap-channel message
+
+Configure **Kanal-Nachricht (Embed / Components V2)** to send a message to the trap channel when you save the configuration. The displayed **Nachrichtentyp** is **Embed**, with the default title `Sicherheitsfalle / Honeypot`.
+
+The embed editor includes author, title, description, image, thumbnail, footer and color fields. Type `%` in a text field to open the variable picker.
+
+The visible variables include:
+
+| Variable | What it represents |
+| --- | --- |
+| `{todaybanned}` | Bans today |
+| `{thisweekbanned}` | Bans this week |
+| `{thismonthbanned}` | Bans this month (Premium) |
+| `{todaybanned_with_this_system}` | Bans by this system today |
+| `{thisweekbanned_with_this_system}` | Bans by this system this week |
+| `{thismonthbanned_with_this_system}` | Bans by this system this month |
+| `{user}` | User |
+
+<Note>
+  The variable picker may show additional options beyond those listed here.
+</Note>

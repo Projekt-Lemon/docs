@@ -1,0 +1,54 @@
+---
+title: "Scam detection"
+description: "Detect phishing links, malicious domains and cross-channel spam, and act on them automatically."
+---
+
+Scam detection scans messages for phishing, suspicious domains and spam that is repeated across channels. When a message matches, the bot can delete it and punish the author.
+
+## Open the module
+
+1. Open the [dashboard](https://projektlemon.de) and select your server.
+2. Go to **Moderation & Sicherheit** → **Scam Detection**.
+3. Turn on **Scam Detection aktiv**.
+
+## Detection rules
+
+Check the rules you want to use. All rules are on by default.
+
+| Rule | What it detects |
+| --- | --- |
+| `nitro_steam_spam` | Nitro and Steam phishing (text plus link) |
+| `malicious_redirects` | Suspicious login and gift domains |
+| `image_spam` | The same image posted across channels |
+| `link_spam` | The same links spammed repeatedly |
+| `text_spam` | Similar text posted across channels |
+
+## Response options
+
+- **Nachricht löschen**: Deletes the detected message.
+- **Erst warnen, dann Maßnahme**: Warns the user first and only applies the action on a repeat offense.
+
+## Action and thresholds
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **Maßnahme (removal_action)** | The action taken against the user, for example **Ban**. | Ban |
+| **Spam-Schwellwert** | How many matching messages trigger the spam rules. | 2 |
+| **Zeitfenster (Sekunden)** | The time window in seconds in which the threshold must be reached. | 30 |
+
+<Tip>
+With the defaults, a user who posts the same content twice within 30 seconds triggers the action.
+</Tip>
+
+## Logging and immunity
+
+- **Log-Kanal**: The channel where detections are logged.
+- **Immune Rollen (werden nicht geahndet)**: Roles that are never punished.
+
+<Note>
+Users with the **Manage Messages** or **Administrator** permission are always immune.
+</Note>
+
+## Save your changes
+
+When you change a setting, the bar **Du hast ungespeicherte Änderungen!** appears. Click **Änderungen speichern** to apply the changes or **Abbrechen** to discard them.

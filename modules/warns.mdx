@@ -1,0 +1,40 @@
+---
+title: "Warns"
+description: "Configure the warn system, moderation roles, escalation levels, AutoMod reasons and public warn messages in the dashboard."
+---
+
+Use the **Warns** module to record moderator warnings and set actions for members who reach a warn level. Open **Moderation & Sicherheit** > **Warns** in the dashboard to configure it.
+
+## Enable and configure warns
+
+Turn on **Warn-System**, then choose which information moderators must provide when issuing a warn:
+
+| Setting | What it controls |
+| --- | --- |
+| **Grund erforderlich** | Require a reason for a warn. |
+| **Anhang erforderlich** | Require an attachment. |
+| **Anonyme Warns erlauben** | Allow anonymous warns. |
+
+Select the roles that can give and remove warns. If you leave the role fields empty, moderator or administrator permissions are used instead.
+
+## Warn levels
+
+Add warn levels to define what happens when a member reaches a specified warn count. Each level has a count, an action such as **Timeout** or **Ban**, a duration field and a role field. Enter the values you want for each level. The dashboard example shows `60` in the duration field; the unit is not specified in the available view.
+
+## AutoMod reasons
+
+Set the reason used for warnings from AutoMod. The displayed default is `AutoMod-Verstoß`. You can optionally enter AutoMod rule IDs.
+
+## Public warn message
+
+Choose a log channel for public warn messages and configure the message with an embed from the [Embed maker](/modules/embed-maker).
+
+The available variables for the public warn message are:
+
+| Member and moderator | Warn and server |
+| --- | --- |
+| `{user}`, `{user_mention}`, `{user_id}` | `{warn_id}`, `{reason}`, `{warn_count}` |
+| `{moderator}`, `{moderator_mention}`, `{moderator_id}` | `{server}`, `{server_id}`, `{status}` |
+|  | `{anonymous}`, `{timestamp}`, `{attachment}` |
+
+Save your changes in the dashboard when you finish configuring the module.
