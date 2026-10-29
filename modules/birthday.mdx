@@ -1,0 +1,50 @@
+---
+title: "Birthday"
+description: "Configure birthday greetings, the live birthday list, roles and message templates from the dashboard."
+---
+
+Use **Geburtstag** in the web dashboard to manage birthday greetings and an optional live list of upcoming birthdays.
+
+Open the dashboard and go to **Community & Willkommen** > **Geburtstag**.
+
+## Birthday greetings
+
+Turn on **Geburtstag-Modul aktivieren** to use the module. Members enter their birthday with `/geburtstag`. The dashboard notes a protective notice for users under 13 in line with Discord's terms of service.
+
+Choose a **Glückwunsch-Kanal** for birthday messages, then select the **Nachrichtentyp**. The example shown uses an **Embed**. Under **Embed im Modul bearbeiten**, edit the message name, author, title, description, image, thumbnail, footer and color. For example, the description can use `{user}` and `{age}` to personalize the greeting.
+
+## Live birthday list
+
+Enable **Live-Geburtstagsliste** to show upcoming birthdays in a selected **Kanal für die Liste**. The dashboard says the list is updated daily at about 00:05 and edited when a new entry is added.
+
+| Setting | Description |
+| --- | --- |
+| **Zeitraum (Tage voraus, max. 365 = 1 Jahr)** | How far ahead the list shows birthdays, up to 365 days. |
+| **Rollen: Geburtstag anderer bearbeiten** | Roles allowed to edit other members' birthdays. |
+| **Rollen: dürfen keinen Geburtstag eintragen** | Roles that cannot add a birthday. |
+| **Button unter der Geburtstagsliste: „Eigenen Geburtstag hinzufügen“** | Show a button under the list for members to add their birthday. |
+| **Button unter Glückwunsch-Nachricht: „Eigenen Geburtstag hinzufügen“** | Show the same button under birthday greetings. |
+
+Under **Listen-Embed bearbeiten**, customize the list title, description, footer, color and optional **Listen-Bild**. The example description uses `{days}` for the look-ahead period and `{mentionlist}` for the list of mentioned members. Without your own list image, the bot generates a calendar with upcoming birthdays. If you upload your own image, it is used unchanged. Check **Liste jetzt in den Kanal senden / neu posten** to post or repost the list, then click **Geburtstag speichern**.
+
+## Additional settings
+
+The dashboard also shows **Änderungen pro Jahr (0 = nie)**, a role selector for who can change other members' birthdays, and **Thread-Name (Variablen:** {user}**,** {age}**)**. Set a thread name with `{user}` or `{age}` if you use the thread option.
+
+## Message variables
+
+The variable picker in the birthday message editor shows:
+
+| Variable | Meaning |
+| --- | --- |
+| `{month}` | Month name |
+| `{user}` | User name |
+| `{day}` | Day |
+| `{age}` | Age |
+| `{list}` | List of names |
+| `{mentionlist}` | List of mentions |
+| `{count}` | Count |
+
+The list template also shows `{days}` for the number of days ahead.
+
+When you have unsaved edits, the dashboard shows **Du hast ungespeicherte Änderungen!** with **Änderungen speichern** and **Abbrechen**.
