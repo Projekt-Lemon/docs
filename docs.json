@@ -1,53 +1,70 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Projekt Lemon",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#CA8A04",
+    "light": "#FACC15",
+    "dark": "#A16207"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
       {
-        "group": "Getting Started",
+        "group": "Getting started",
         "pages": [
           "index",
           "quickstart"
         ]
+      },
+      {
+        "group": "Web dashboard",
+        "pages": [
+          "dashboard/overview"
+        ]
+      },
+      {
+        "group": "Modules",
+        "pages": [
+          "modules/welcome-messages",
+          "modules/tickets",
+          "modules/verification",
+          "modules/security",
+          "modules/leveling",
+          "modules/embed-maker",
+          "modules/community-tools"
+        ]
+      },
+      {
+        "group": "Premium",
+        "pages": [
+          "premium/overview",
+          "premium/custom-bot"
+        ]
+      },
+      {
+        "group": "Help",
+        "pages": [
+          "support"
+        ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    ]
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "href": "https://status.projektlemon.de",
+        "label": "Status"
+      },
+      {
+        "href": "https://projektlemon.de",
+        "label": "Website"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "href": "https://projektlemon.de"
     }
   },
   "contextual": {
@@ -56,17 +73,41 @@
       "view",
       "chatgpt",
       "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "perplexity"
     ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "links": [
+      {
+        "header": "Projekt Lemon",
+        "items": [
+          {
+            "label": "Website",
+            "href": "https://projektlemon.de"
+          },
+          {
+            "label": "Status",
+            "href": "https://status.projektlemon.de"
+          },
+          {
+            "label": "Top.gg",
+            "href": "https://top.gg/bot/1392902571223421068"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Terms of Service",
+            "href": "https://projektlemon.de/agb"
+          },
+          {
+            "label": "Right of withdrawal",
+            "href": "https://projektlemon.de/widerrufsbelehrung"
+          }
+        ]
+      }
+    ]
   }
 }

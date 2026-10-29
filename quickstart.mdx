@@ -1,47 +1,41 @@
 ---
 title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+description: "Add Projekt Lemon to your Discord server and set up your first modules."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+## Requirements
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
+- A Discord server where you have the **Manage Server** permission.
 
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+## Set up Projekt Lemon
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
-
-    ```bash
-    npm install your-package
-    ```
+  <Step title="Invite the bot">
+    Open [projektlemon.de](https://projektlemon.de) or the bot's [Top.gg page](https://top.gg/bot/1392902571223421068) and select **Invite**. Choose your server and confirm the requested permissions.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
-
-    ```bash
-    your-cli init
-    ```
+  <Step title="Open the dashboard">
+    Go to [projektlemon.de](https://projektlemon.de), sign in with your Discord account and select your server.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
-
-    ```bash
-    your-cli start
-    ```
+  <Step title="Enable modules">
+    Turn on the modules you need, for example [welcome messages](/modules/welcome-messages), [tickets](/modules/tickets) or [verification](/modules/verification), and adjust their settings.
+  </Step>
+  <Step title="Check the role order">
+    In Discord, open **Server Settings > Roles** and drag the Projekt Lemon role above every role the bot should assign or moderate. Discord only lets bots manage roles below their own.
   </Step>
 </Steps>
 
 <Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
-
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
+  Projekt Lemon uses slash commands. Type `/` in any channel to see the available commands.
 </Tip>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Dashboard overview" icon="gauge" href="/dashboard/overview">
+    Learn how the dashboard is organized.
+  </Card>
+
+  <Card title="Security" icon="lock" href="/modules/security">
+    Protect your server against raids and spam.
+  </Card>
+</CardGroup>
