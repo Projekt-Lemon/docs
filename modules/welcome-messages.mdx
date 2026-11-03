@@ -1,26 +1,39 @@
 ---
 title: "Welcome messages"
-description: "Greet new members with personal embeds, variables and optional components."
+description: "Greet new members with a custom embed and placeholders."
 ---
 
-Welcome messages give new members a warm first impression and point them straight to your rules and most important channels.
+Welcome messages give new members a warm first impression. You configure the embed in the dashboard.
 
-## Features
+## Settings
 
-- **Embeds** with a clean layout
-- **Variables** that are replaced automatically, for example the member count
-- **Optional components** such as buttons that link to rules or channels
+| Field | Default |
+| --- | --- |
+| Enabled | Off |
+| Channel | None |
+| Embed title | `Willkommen auf {server}!` |
+| Embed description | `Hallo @userping, willkommen auf **{server}**! Du bist Mitglied #{membercount}.` |
+| Embed color | `#3b82f6` |
+| Thumbnail URL | `{user_avatar}` |
+| Image URL | Empty |
+| Footer text | `Projekt Lemon • {server}` |
+| Footer icon | `{server_icon}` |
 
-## Example
+## Variables
 
-```text
-Welcome to the server!
-You are member #{member}. Please read the rules!
-```
+| Variable | Replaced with |
+| --- | --- |
+| `@userping` | Mention of the new member |
+| `@user` | Display name |
+| `{username}` | Username |
+| `{server}` | Server name |
+| `{membercount}` | Member count |
+| `{user_avatar}` | Avatar URL of the member |
+| `{server_icon}` | Server icon URL |
 
 ## Set up
 
 1. Open the [dashboard](/dashboard/overview) and select your server.
 2. Open **Welcome messages** and enable the module.
 3. Choose the channel where the message should be posted.
-4. Design your embed, add variables and components, then save.
+4. Design your embed with the variables above, then save.

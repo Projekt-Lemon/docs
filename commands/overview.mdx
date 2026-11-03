@@ -1,0 +1,46 @@
+---
+title: "Slash commands"
+description: "All slash commands available in Projekt Lemon."
+---
+
+Type `/` in any channel to see the available commands.
+
+## Moderation
+
+| Command | Description | Permission |
+| --- | --- | --- |
+| `/lockchannel` | Locks the current channel for regular members | Administrator |
+| `/unlock` | Unlocks the current channel | Administrator |
+
+### Channel lock
+
+When you run `/lockchannel`:
+
+1. `@everyone` can no longer send messages in the channel. The previous channel permissions are saved.
+2. The bot posts a **Kanal gesperrt** notice in the channel.
+3. You receive a DM with a link to the channel and a **Kanal entsperren** button.
+4. If you are not the server owner, the owner receives a DM about the lock.
+
+Unlock the channel with `/unlock` or the button in the DM. The saved permissions are restored and the server owner is informed.
+
+<Note>
+  Saved permissions are kept in memory. After a bot restart, unlocking only resets the send-messages permission for `@everyone`.
+</Note>
+
+## Information
+
+| Command | Description |
+| --- | --- |
+| `/serverinfo` | Shows detailed information about the server |
+| `/userinfo [member]` | Shows information about a member, or about you if no member is given |
+| `/robloxuser <user>` | Shows information about a Roblox user (username, user ID or display name) |
+| `/emojicode <emoji>` | Generates Python code for a custom emoji |
+
+## Fun
+
+| Command | Description |
+| --- | --- |
+| `/taser <target>` | Uses a taser on a member. Success is random. |
+| `/handschellen <target>` | Handcuffs a member. Success is random. |
+| `/polizei` | Calls the police on the server |
+| `/clickfight <gegner>` | Starts a 30-second click battle against another member |

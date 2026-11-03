@@ -3,34 +3,36 @@ title: "Honeypot"
 description: "Set up a trap channel, matching rule, punishment, moderation log and channel message for the Honeypot spam filter."
 ---
 
-The Honeypot module lets you configure a trap channel for spam bots. The dashboard groups its settings into channel assignment, a matching rule, punishment, logging and the channel message.
+The Honeypot module turns a channel into a trap for spam bots. When someone posts a message in it that matches the rule, the bot punishes the author and logs the event.
 
-## Set up the trap
+## Settings
 
-1. Turn on **Honeypot-Spamfilter global aktiv**.
-2. Under **Kanal-Zuweisung (Fallen-Kanal)**, select the trap channel. Hide it from regular members so they do not trigger the trap accidentally.
-3. Under **Auto-Moderations-Regel**, review the matching rule. The displayed default regular expression is `.*`.
-4. Under **Bestrafung & Aktion**, configure the punishment. **Sofortiger Bann** is shown, along with an option to purge messages from the last 24 hours.
-5. Under **Logging & Benachrichtigungen**, select a **Mod-Log** channel.
+| Setting | Description | Default |
+| --- | --- | --- |
+| Enabled | Turns the honeypot on or off | Off |
+| Trap channel | Channel that acts as the trap | None |
+| Trigger | Regular expression a message must match | `.*` (every message) |
+| Action | **Ban** (instant ban), **Kick** or **Timeout** (7 days) | Ban |
+| Purge messages | With **Ban**, also deletes the user's messages from the last 24 hours | Off |
+| Log channel | Channel for the moderation log | None |
+| Embed title | Title of the trap channel message | `⚠️ Sicherheitsfalle / Honeypot` |
+| Embed description | Text of the trap channel message | Empty |
+| Embed color | Color of the trap channel message | `#ef4444` |
+
+<Warning>
+  Hide the trap channel from regular members so they do not trigger it accidentally. Bots and messages outside the trap channel are ignored.
+</Warning>
 
 ## Trap-channel message
 
-Configure **Kanal-Nachricht (Embed / Components V2)** to send a message to the trap channel when you save the configuration. The displayed **Nachrichtentyp** is **Embed**, with the default title `Sicherheitsfalle / Honeypot`.
+When you save with the honeypot enabled, the bot posts an embed with your title, description and color to the trap channel.
 
-The embed editor includes author, title, description, image, thumbnail, footer and color fields. Type `%` in a text field to open the variable picker.
+## Log entry
 
-The visible variables include:
+If a log channel is set, every catch is logged with:
 
-| Variable | What it represents |
-| --- | --- |
-| `{todaybanned}` | Bans today |
-| `{thisweekbanned}` | Bans this week |
-| `{thismonthbanned}` | Bans this month (Premium) |
-| `{todaybanned_with_this_system}` | Bans by this system today |
-| `{thisweekbanned_with_this_system}` | Bans by this system this week |
-| `{thismonthbanned_with_this_system}` | Bans by this system this month |
-| `{user}` | User |
-
-<Note>
-  The variable picker may show additional options beyond those listed here.
-</Note>
+- User name and ID
+- Join date
+- Action taken
+- The triggering message (first 900 characters)
+- Server name

@@ -37,7 +37,16 @@
           "modules/embed-maker",
           "modules/community-tools",
           "modules/scam-detection",
-          "modules/ghostping"
+          "modules/ghostping",
+          "modules/autoresponder",
+          "modules/server-stats",
+          "modules/server-tag"
+        ]
+      },
+      {
+        "group": "Commands",
+        "pages": [
+          "commands/overview"
         ]
       },
       {

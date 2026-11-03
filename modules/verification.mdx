@@ -1,22 +1,35 @@
 ---
 title: "Verification"
-description: "Keep bots out of your server with an image captcha, from easy to extremely OCR-resistant."
+description: "Let new members verify with a button and receive a role automatically."
 ---
 
-Verification makes new members prove they are human before they get access to your server.
+Verification posts an embed with a **Verify** button. Members who click it receive the verification role.
 
-## Image captcha
+## Settings
 
-Members solve an image captcha to verify. You choose the difficulty, from **easy** up to **extreme**, which is highly resistant to automated text recognition (OCR).
+| Field | Default |
+| --- | --- |
+| Channel | Channel the verification embed is posted to |
+| Role | Role members receive after verifying |
+| Title | `Verifizierung` |
+| Description | `Klicke auf den Button unten, um dich zu verifizieren.` |
+| Color | `#3b82f6` |
+| Button text | `Verifizieren` |
 
-<Tip>
-  Start with a lower level and raise it if automated accounts still get through.
-</Tip>
+When you save, the bot sends the embed with a green button to the selected channel. The button keeps working after a bot restart.
+
+## What members see
+
+All replies are only visible to the member who clicked:
+
+- **Success:** the member receives the role.
+- **Already verified:** the member already has the role.
+- **No role configured** or **role no longer exists:** an error is shown.
+- **Missing permissions:** the bot cannot assign the role.
 
 ## Set up
 
 1. Open the [dashboard](/dashboard/overview) and select your server.
-2. Open **Verification** and enable the module.
-3. Choose the captcha difficulty.
-4. Select the role members receive after verifying.
-5. Make sure the Projekt Lemon role is above that role in **Server Settings > Roles**.
+2. Open **Verification**.
+3. Select the channel and the role, then adjust the text and save.
+4. Make sure the Projekt Lemon role is above the verification role in **Server Settings > Roles**.

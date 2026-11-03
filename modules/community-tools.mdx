@@ -23,4 +23,22 @@ Let members create temporary voice channels that disappear when they are empty.
 
 ## Voice support
 
-Offer support in voice channels. Members join a waiting channel and your team is notified.
+Offer support in voice channels. When a member joins the waiting channel:
+
+1. The bot posts `🔔 <name> ist dem Support-Warteraum beigetreten.` in the staff notification channel.
+2. The bot joins the waiting channel and plays a voice message: the **greeting voice** during support hours, the **offline voice** outside them.
+
+| Setting | Description |
+| --- | --- |
+| Enabled | Turns voice support on or off |
+| Waiting channel | Voice channel members join for support |
+| Staff notification channel | Text channel for staff alerts |
+| Greeting voice | MP3 played during support hours. Upload your own `.mp3` or pick an existing one. |
+| Offline voice | MP3 played outside support hours |
+| Support hours | A **from** and **to** time for each weekday. Days without times count as closed. |
+| `/supporttimes` display | Show support hours only via `/supporttimes` (embed), in a channel, or by DM |
+| `/supporttimes` command | Enables the slash command on the server |
+
+<Note>
+  Support hours use the bot server's system time.
+</Note>
